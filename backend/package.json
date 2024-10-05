@@ -1,0 +1,61 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for Fiber AI full-stack challenge",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npx tsx src/index.ts",
+    "setup": "npx tsx src/runners/index.ts",
+    "build": "npx tsc",
+    "test": "npx vitest run"
+  },
+  "author": "Fiber AI",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@maselious/bottleneck": "^2.19.8",
+    "@trpc/server": "^10.45.2",
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "bullmq": "^5.15.0",
+    "cheerio": "^1.0.0",
+    "colorette": "^2.0.20",
+    "cors": "^2.8.5",
+    "crawlee": "^3.11.4",
+    "dayjs": "^1.11.11",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "fs-extra": "^11.2.0",
+    "immutable": "^5.0.0-beta.5",
+    "ioredis": "^5.4.1",
+    "jest-extended": "^4.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "kysely": "^0.27.4",
+    "lodash-es": "^4.17.21",
+    "nanoid": "^5.0.7",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.13.0",
+    "playwright": "^1.47.2",
+    "safe-stable-stringify": "^2.4.3",
+    "true-myth": "^8.0.1",
+    "ts-pattern": "^5.4.0",
+    "znv": "^0.4.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.7.4",
+    "@types/node-fetch": "^2.6.11",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.5",
+    "vitest": "^2.1.1"
+  }
+}

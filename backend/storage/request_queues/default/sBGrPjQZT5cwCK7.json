@@ -1,0 +1,9 @@
+{
+	"id": "sBGrPjQZT5cwCK7",
+	"json": "{\"id\":\"sBGrPjQZT5cwCK7\",\"url\":\"https://ycombinator.com/companies\",\"loadedUrl\":\"https://www.ycombinator.com/companies\",\"uniqueKey\":\"https://ycombinator.com/companies\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-10-02T05:33:23.044Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://ycombinator.com/companies",
+	"url": "https://ycombinator.com/companies"
+}

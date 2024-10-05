@@ -1,0 +1,50 @@
+{
+  "usableSessionsCount": 1,
+  "retiredSessionsCount": 0,
+  "sessions": [
+    {
+      "id": "session_aTgRYmtK06",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "XSRF-TOKEN",
+            "value": "YCQYttdNNF7UbLwtGdTgXGsOWPoeZJfMdt_JQZpvPapvVe9iQ8O83vxRJoERZ2OedYsHWR1D1ow_3z9X3SRPYA",
+            "domain": "www.ycombinator.com",
+            "path": "/",
+            "secure": true,
+            "hostOnly": true,
+            "creation": "2024-10-02T05:33:23.041Z",
+            "lastAccessed": "2024-10-02T05:33:23.041Z",
+            "sameSite": "lax"
+          },
+          {
+            "key": "_bf_session_key",
+            "value": "7jums21WsgyxYxuc4Luydmxdy1q4FTi%2B6ksLh3DfCTGkOiXBp%2FV6Hl%2BJRG4aSJPA8lOzTkZthZMR7K4hYWKWQKv3SjKhquORAnkMi3TjwijDGm2%2FiI1hvjUTFPd02hzqNWUiu7m2q0X0WIoO7vwELQhWO6SNSAkjvru6b%2BEMz2Q46LCdMUqbHVJkc9Ksn7ZNsXTnHjjBb%2FQFd%2FqyHmfTNTl39RsgRwzcM68xWelrNs4%2Fvk%2FeFS7V2WPQ1zcSCcCGQbC%2BRLeJ%2Bm3ckgnBPzXaSeoad53WY9Q%3D--X7R6p%2BrgdvueTir6--WhbJu%2BWx2BI0Zu7b898x9Q%3D%3D",
+            "domain": "www.ycombinator.com",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": true,
+            "creation": "2024-10-02T05:33:23.041Z",
+            "lastAccessed": "2024-10-02T05:33:23.041Z",
+            "sameSite": "lax"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-10-02T06:23:22.365Z",
+      "createdAt": "2024-10-02T05:33:22.365Z",
+      "usageCount": 1,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    }
+  ]
+}
