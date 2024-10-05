@@ -32,27 +32,20 @@ npm install
 ```
 
 Running the Application
-1. Run Redis Server
-Make sure Redis is running. You can start Redis with:
-```console
-redis-server
-```
-
-2. Run the Worker
+1. Run the Worker
 The worker processes background jobs (like email grabbing and bounce detection) using Redis-based queues.
 
 To run the worker:
 ```console
 npm run worker
 ```
-Make sure the Redis server is running before starting the worker.
 
-3. Run the local server on port 4000
+2. Run the local server on port 4000
 ```console
 npm run start
 ```  
 
-4. Scraping Companies
+3. Scraping Companies
 The scrapeCompanies.js file is used to scrape company data from external websites (such as YCombinator and WorkAtAStartup) and store them in the PostgreSQL database.
 
 To run the scrapeCompanies.js script:
