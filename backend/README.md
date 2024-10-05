@@ -43,15 +43,13 @@ The worker processes background jobs (like email grabbing and bounce detection) 
 
 To run the worker:
 ```console
-npx tsc
-node dist/queue/worker.js
+npm run worker
 ```
 Make sure the Redis server is running before starting the worker.
 
 3. Run the local server on port 4000
 ```console
-npx tsc
-node dist/server.js
+npm run start
 ```  
 
 4. Scraping Companies
@@ -67,8 +65,7 @@ To run the scrapeCompanies.js script:
 2. Run the scraper:
     In your terminal, run:
     ```console
-    npx tsc
-    node dist/lib/scrapeCompanies.js
+    npm run setup
     ```
     This script will:
         - Scrape companies from the YC companies page.
