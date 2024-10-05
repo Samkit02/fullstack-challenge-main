@@ -1,6 +1,7 @@
 import { Kysely, PostgresDialect } from 'kysely';
 import pg from 'pg';
 import dotenv from 'dotenv';
+import fs from 'fs';
 
 dotenv.config();
 
@@ -58,7 +59,11 @@ interface Database {
 }
 
 export const pool = new Pool({
-    connectionString: "postgres://postgres:S@mkitshah02@localhost:5432/yc_companies",
+    connectionString: "postgres://postgres:Samkit%23123@database-1.c7gkime0ieyf.us-east-1.rds.amazonaws.com:5432/postgres", //"postgres://postgres:S@mkitshah02@localhost:5432/yc_companies",
+    ssl: {
+        rejectUnauthorized: true,
+        ca: fs.readFileSync("/Users/samkitshah/CLionProjects/fullstack-challenge-main/us-east-1-bundle.pem").toString(),
+    },
 });
 
 export const db = new Kysely<Database>({

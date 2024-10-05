@@ -27,6 +27,16 @@ const apiKeyAuth = (req: Request, res: Response, next: NextFunction) => {
 
 app.use(apiKeyAuth);
 
+app.get('/health-check', async (req: Request, res: Response) => {
+  try {
+    await db.selectFrom('companies').select('id').limit(1).execute();
+    res.status(200).json({ message: 'Database connection is healthy.' });
+  } catch (error) {
+    console.error('Database connection failed:', error);
+    res.status(500).json({ message: 'Database connection failed', error });
+  }
+});
+
 app.post('/search', async (req: Request, res: Response) => {
   try {
     const searchParams = req.body;
