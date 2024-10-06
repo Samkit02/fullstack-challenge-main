@@ -32,8 +32,14 @@ npm install
 ```
 
 Running the Application
-1. Run the Worker
+1. Install Redis Server and Run the Worker
 The worker processes background jobs (like email grabbing and bounce detection) using Redis-based queues.
+Make sure redis is downloaded.
+
+To install the redis:
+```console
+brew install redis
+```
 
 To run the worker:
 ```console
