@@ -31,6 +31,9 @@ Install all dependencies:
 npm install
 ```
 
+Change the path of .pem file in db.ts.
+I have added the file in root, after cloning the project just change the location of .pem file in backend/src/db/db.ts
+
 Running the Application
 1. Install Redis Server and Run the Worker
 The worker processes background jobs (like email grabbing and bounce detection) using Redis-based queues.
