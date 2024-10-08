@@ -52,8 +52,26 @@ app.post('/search', async (req: Request, res: Response) => {
         sql<string[]>`(SELECT ARRAY_AGG(DISTINCT jobs.title) FROM jobs WHERE jobs.company_id = companies.id)`.as('jobTitles'),
         sql<string[]>`(SELECT ARRAY_AGG(DISTINCT jobs.location) FROM jobs WHERE jobs.company_id = companies.id)`.as('jobLocations'),
 
-        sql<string[]>`(SELECT ARRAY_AGG(DISTINCT founders.full_name) FROM founders WHERE founders.company_id = companies.id)`.as('founderNames'),
-        sql<string[]>`(SELECT ARRAY_AGG(DISTINCT founders.linkedin_url) FROM founders WHERE founders.company_id = companies.id)`.as('founderLinkedinUrls')
+        sql<string[]>`(SELECT JSON_AGG(
+          JSON_BUILD_OBJECT(
+            'name', founders.full_name,
+            'linkedinUrl', founders.linkedin_url,
+            'email', CASE 
+                       WHEN founders.bounce_status = 'email is valid' THEN founders.email 
+                       ELSE 'No email available' 
+                     END
+          )
+        ) FROM founders 
+        WHERE founders.company_id = companies.id)`.as('founders')
+        // sql<string[]>`(SELECT ARRAY_AGG(DISTINCT founders.full_name) FROM founders WHERE founders.company_id = companies.id)`.as('founderNames'),
+        // sql<string[]>`(SELECT ARRAY_AGG(DISTINCT founders.linkedin_url) FROM founders WHERE founders.company_id = companies.id)`.as('founderLinkedinUrls'),
+        // sql<string[]>`(SELECT ARRAY_AGG(
+        //   CASE 
+        //     WHEN founders.bounce_status = 'email is valid' THEN founders.email 
+        //     ELSE 'No email available' 
+        //   END) 
+        // FROM founders 
+        // WHERE founders.company_id = companies.id)`.as('founderEmails')
       ])
       .where('companies.name', 'like', `%${searchParams.companyName}%`)
       .groupBy(['companies.id', 'companies.name', 'companies.location', 'companies.description']);
