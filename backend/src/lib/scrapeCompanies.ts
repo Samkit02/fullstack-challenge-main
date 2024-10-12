@@ -116,7 +116,7 @@ const scrapeCompanies = async (): Promise<void> => {
 
     let previousHeight: number | undefined;
     const scrollDelay = 1000;
-    const maxScrollAttempts = 20;
+    const maxScrollAttempts = 40;
     let scrapedCompanies = new Set<string>();
 
     for (let i = 0; i < maxScrollAttempts; i++) {

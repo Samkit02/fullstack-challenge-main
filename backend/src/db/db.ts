@@ -60,11 +60,12 @@ interface Database {
 
 export const pool = new Pool({
     //connectionString: "postgres://postgres:S@mkitshah02@localhost:5432/yc_companies"
-    connectionString: "postgres://postgres:Samkit%23123@database-1.c7gkime0ieyf.us-east-1.rds.amazonaws.com:5432/postgres",
-    ssl: {
-        rejectUnauthorized: true,
-        ca: fs.readFileSync("/Users/samkitshah/CLionProjects/fullstack-challenge-main/us-east-1-bundle.pem").toString(),
-    },
+    host: '34.121.118.184',
+    port: 5432,
+    user: 'postgres',
+    password: 'Samkit#123',
+    database: 'fiber_ai',
+    ssl: { rejectUnauthorized: false }
 });
 
 export const db = new Kysely<Database>({
